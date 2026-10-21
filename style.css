@@ -1,0 +1,222 @@
+/* Simple clean theme */
+:root {
+  --bg: #f5f7f6;
+  --card: #fff;
+  --ink: #1c2321;
+  --muted: #5d6b66;
+  --line: #dde4e1;
+  --accent: #0f5c5c;
+  --accent-soft: #e3efee;
+  --ok: #1b7f4b;
+  --warn: #b26a00;
+  --bad: #b3261e;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font:
+    15px/1.5 "Segoe UI",
+    system-ui,
+    sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 14px 24px;
+  background: var(--accent);
+  color: #fff;
+}
+header h1 {
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0;
+}
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 20px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px;
+  margin-bottom: 18px;
+}
+h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+label {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 3px;
+}
+input,
+select,
+button {
+  font: inherit;
+  padding: 8px 11px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--ink);
+}
+input:hover,
+select:hover {
+  border-color: #b9c6c1;
+}
+button {
+  cursor: pointer;
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+button:hover {
+  filter: brightness(1.1);
+}
+button.alt {
+  background: #fff;
+  color: var(--accent);
+}
+button.alt:hover {
+  background: var(--accent-soft);
+  filter: none;
+}
+header button.alt {
+  border-color: #fff;
+}
+button.sm {
+  padding: 3px 9px;
+  font-size: 13px;
+}
+button.bad {
+  background: var(--bad);
+  border-color: var(--bad);
+}
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid #e8a500;
+  outline-offset: 1px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-end;
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.stat {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: var(--muted);
+}
+.stat b {
+  display: block;
+  font-size: 28px;
+  color: var(--ink);
+}
+.tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+.tabs button {
+  background: #fff;
+  color: var(--accent);
+}
+.tabs button.on {
+  background: var(--accent);
+  color: #fff;
+}
+.wrap {
+  overflow-x: auto;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background: #fff;
+}
+th,
+td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  font-size: 14px;
+}
+th {
+  background: var(--accent-soft);
+  white-space: nowrap;
+  font-weight: 600;
+}
+tr:hover td {
+  background: #fafcfb;
+}
+.tag {
+  display: inline-block;
+  padding: 1px 9px;
+  border-radius: 10px;
+  font-size: 12px;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+}
+.Verified,
+.Compliant,
+.Approved {
+  color: var(--ok);
+}
+.Pending,
+.Held,
+.Returned {
+  color: var(--warn);
+}
+.Deficiency {
+  color: var(--bad);
+}
+.none {
+  color: var(--muted);
+}
+.small {
+  font-size: 12px;
+  color: var(--muted);
+}
+#toast {
+  position: fixed;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 16px;
+  border-radius: 6px;
+  color: #fff;
+  display: none;
+  max-width: 90vw;
+  z-index: 9;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+a {
+  color: var(--accent);
+}
